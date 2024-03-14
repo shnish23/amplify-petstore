@@ -22,7 +22,7 @@ export default function NavBarHeader2(props) {
       position="relative"
       boxShadow="0px 2px 6px rgba(0.05098039284348488, 0.10196078568696976, 0.14901961386203766, 0.15000000596046448)"
       padding="16px 32px 16px 32px"
-      backgroundColor="rgba(255,255,255,1)"
+      backgroundColor="rgba(40,44,52,1)"
       {...getOverrideProps(overrides, "NavBarHeader2")}
       {...rest}
     >
@@ -82,7 +82,7 @@ export default function NavBarHeader2(props) {
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(13,26,38,1)"
+          color="rgba(255,255,255,1)"
           lineHeight="24px"
           textAlign="left"
           display="block"
@@ -96,71 +96,8 @@ export default function NavBarHeader2(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Home"
-          {...getOverrideProps(overrides, "Home")}
-        ></Text>
-        <Text
-          fontFamily="Inter"
-          fontSize="16px"
-          fontWeight="400"
-          color="rgba(13,26,38,1)"
-          lineHeight="24px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          shrink="0"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="Products"
-          {...getOverrideProps(overrides, "Products")}
-        ></Text>
-        <Text
-          fontFamily="Inter"
-          fontSize="16px"
-          fontWeight="400"
-          color="rgba(13,26,38,1)"
-          lineHeight="24px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          shrink="0"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="Pricing"
-          {...getOverrideProps(overrides, "Pricing")}
-        ></Text>
-        <Text
-          fontFamily="Inter"
-          fontSize="16px"
-          fontWeight="400"
-          color="rgba(13,26,38,1)"
-          lineHeight="24px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          shrink="0"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="Contact"
-          {...getOverrideProps(overrides, "Contact")}
+          children="Add Pet"
+          {...getOverrideProps(overrides, "Add Pet")}
         ></Text>
       </Flex>
       <Flex

@@ -1,11 +1,23 @@
 import './App.css';
 import {
-  Pets 
+  Pets,
+  NavBarHeader2
  } from './ui-components';
-
-function App() {
-  return (
-    <div className="App">
+ 
+ function App() {
+   const navbarOverrides = {
+    "Add Pet":{
+      style:{
+        cursor: "pointer"
+      },
+      onClick: ()=>{
+        alert("Hello")
+      },
+    }
+   }
+   return (
+     <div className="App">
+      <NavBarHeader2 width={"100%"} overrides={navbarOverrides} />
       <header className="App-header">
         <Pets />
       </header>
