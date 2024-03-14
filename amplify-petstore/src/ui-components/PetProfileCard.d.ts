@@ -19,11 +19,15 @@ export declare type Variant = {
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type PetProfileCardOverridesProps = {
     PetProfileCard?: PrimitiveOverrideProps<FlexProps>;
+    Button3886557?: PrimitiveOverrideProps<ButtonProps>;
     image?: PrimitiveOverrideProps<ImageProps>;
     Name?: PrimitiveOverrideProps<FlexProps>;
     "Melinda Marcus"?: PrimitiveOverrideProps<TextProps>;
-    "Design Engineer at Cloth Studios"?: PrimitiveOverrideProps<TextProps>;
-    Button?: PrimitiveOverrideProps<ButtonProps>;
+    Breed?: PrimitiveOverrideProps<TextProps>;
+    "About: Great Animal"?: PrimitiveOverrideProps<TextProps>;
+    "Age: 23"?: PrimitiveOverrideProps<TextProps>;
+    Button29766907?: PrimitiveOverrideProps<ButtonProps>;
+    Button3886532?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type PetProfileCardProps = React.PropsWithChildren<Partial<FlexProps> & {
     pet?: any;
