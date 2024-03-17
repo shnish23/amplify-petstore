@@ -5,13 +5,13 @@
  **************************************************************************/
 
 export { default as ActionCard } from "./ActionCard";
+export { default as AddPet } from "./AddPet";
 export { default as Ampligram } from "./Ampligram";
 export { default as CTASection } from "./CTASection";
 export { default as CheckoutPayment } from "./CheckoutPayment";
 export { default as CommentCard } from "./CommentCard";
 export { default as ContactUs } from "./ContactUs";
 export { default as DataRow } from "./DataRow";
-export { default as EditProfile } from "./EditProfile";
 export { default as Features2x2 } from "./Features2x2";
 export { default as Filters } from "./Filters";
 export { default as FormCheckout } from "./FormCheckout";
@@ -29,12 +29,12 @@ export { default as NavBarHeader } from "./NavBarHeader";
 export { default as NavBarHeader2 } from "./NavBarHeader2";
 export { default as NavBarSide } from "./NavBarSide";
 export { default as PetCreateForm } from "./PetCreateForm";
-export { default as PetProfileCard } from "./PetProfileCard";
+export { default as PetDetails } from "./PetDetails";
+export { default as PetProfile } from "./PetProfile";
 export { default as PetUpdateForm } from "./PetUpdateForm";
 export { default as Pets } from "./Pets";
 export { default as ProductCard } from "./ProductCard";
 export { default as ProductDetail } from "./ProductDetail";
-export { default as ReviewCard } from "./ReviewCard";
 export { default as SideBar } from "./SideBar";
 export { default as SocialPost } from "./SocialPost";
 export { default as StandardCard } from "./StandardCard";
