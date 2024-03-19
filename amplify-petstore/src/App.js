@@ -6,8 +6,9 @@ import {
   AddPet,
   PetDetails,
  } from './ui-components';
+ import { withAuthenticator } from '@aws-amplify/ui-react';
  
- function App() {
+ function App({user,signOut}) {
   const [showForm, setShowForm] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [pet, setPet] = useState();
@@ -73,6 +74,9 @@ import {
     }
    };
    const navbarOverrides = {
+    Button: {
+      onClick: signOut
+    },
     "Add Pet":{
       style:{
         cursor: "pointer"
@@ -147,4 +151,4 @@ import {
   );
 }
 
-export default App;
+export default withAuthenticator(App);

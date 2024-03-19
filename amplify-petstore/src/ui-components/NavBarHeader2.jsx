@@ -6,10 +6,11 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "./utils";
-import { Button, Flex, Icon, Text, View } from "@aws-amplify/ui-react";
+import { getOverrideProps, useAuth } from "./utils";
+import { Button, Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function NavBarHeader2(props) {
   const { overrides, ...rest } = props;
+  const authAttributes = useAuth().user?.attributes ?? {};
   return (
     <Flex
       gap="10px"
@@ -101,37 +102,92 @@ export default function NavBarHeader2(props) {
         ></Text>
       </Flex>
       <Flex
-        gap="8px"
+        gap="32px"
         direction="row"
         width="unset"
         height="unset"
-        justifyContent="flex-start"
-        alignItems="flex-start"
-        shrink="0"
+        justifyContent="flex-end"
+        alignItems="center"
+        grow="1"
+        shrink="1"
+        basis="0"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "actions")}
+        {...getOverrideProps(overrides, "Frame 321")}
       >
-        <Button
+        <Flex
+          gap="8px"
+          direction="row"
           width="unset"
           height="unset"
+          justifyContent="center"
+          alignItems="center"
           shrink="0"
-          size="default"
-          isDisabled={false}
-          variation="link"
-          children="Log in"
-          {...getOverrideProps(overrides, "Button39493466")}
-        ></Button>
-        <Button
+          position="relative"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "actions")}
+        >
+          <Button
+            width="unset"
+            height="unset"
+            justifyContent="flex-end"
+            shrink="0"
+            size="default"
+            isDisabled={false}
+            variation="primary"
+            children="Sign out"
+            {...getOverrideProps(overrides, "Button")}
+          ></Button>
+        </Flex>
+        <Flex
+          gap="15px"
+          direction="column"
           width="unset"
           height="unset"
+          justifyContent="center"
+          alignItems="center"
           shrink="0"
-          size="default"
-          isDisabled={false}
-          variation="primary"
-          children="Sign up"
-          {...getOverrideProps(overrides, "Button39493467")}
-        ></Button>
+          position="relative"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "Frame 439")}
+        >
+          <Image
+            width="45px"
+            height="45px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
+            shrink="0"
+            position="relative"
+            borderRadius="160px"
+            padding="0px 0px 0px 0px"
+            objectFit="cover"
+            src={authAttributes["profile"]}
+            {...getOverrideProps(overrides, "image")}
+          ></Image>
+          <Text
+            fontFamily="Inter"
+            fontSize="16px"
+            fontWeight="400"
+            color="rgba(255,255,255,1)"
+            lineHeight="0px"
+            textAlign="left"
+            display="block"
+            direction="column"
+            justifyContent="unset"
+            width="unset"
+            height="unset"
+            gap="unset"
+            alignItems="unset"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
+            children={authAttributes["name"]}
+            {...getOverrideProps(overrides, "Name")}
+          ></Text>
+        </Flex>
       </Flex>
     </Flex>
   );
