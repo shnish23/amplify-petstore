@@ -7,8 +7,21 @@ import {
   PetDetails,
  } from './ui-components';
  import { withAuthenticator } from '@aws-amplify/ui-react';
- 
+ import { uploadData } from 'aws-amplify/storage';
+
+
  function App({user,signOut}) {
+  // async function saveFile(){
+  //   try {
+  //     const result = await uploadData({
+  //       key: filename,
+  //       data: file
+  //     }).result;
+  //     console.log('Succeeded: ', result);
+  //   } catch (error) {
+  //     console.log('Error : ', error);
+  //   }
+  // }
   const [showForm, setShowForm] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [pet, setPet] = useState();
@@ -82,6 +95,7 @@ import {
         cursor: "pointer"
       },
       onClick: ()=>{
+        // saveFile();
         setShowForm(!showForm);
       },
     }
